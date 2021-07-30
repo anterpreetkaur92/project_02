@@ -1,6 +1,7 @@
 import React from 'react';
 import '../App.css';
-import {useHistory} from 'react-router-dom'
+import {useHistory} from 'react-router-dom';
+import { AiFillEye } from 'react-icons/ai'
 
 import Header1 from './Header1';
 
@@ -15,11 +16,12 @@ const LoginPage = () => {
                     <div className='flex'>
                         <div className='m-1 bg-white'>
                             <label htmlFor="email">Email Address*</label><br />
-                            <input className='pr-2 border-2 bg-gray-100 w-48 bg-opacity-80' type='email' />
+                            <input className='pr-2 border-2 bg-gray-100 w-48 bg-opacity-80 ' type='email' />
                         </div>
                         <div class='m-1 bg-white'>
                             <label htmlFor="password">Password*</label><br />
-                            <input className='pr-2 border-2 bg-gray-100 w-48 bg-opacity-80' type='password' />
+                            
+                            <input className='pr-2 border-2 bg-gray-100 w-48 bg-opacity-80' type='password'/>
                         </div>
                     </div>
                     <div className='pt-2 ml-4'>
