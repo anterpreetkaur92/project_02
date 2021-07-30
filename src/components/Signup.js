@@ -1,6 +1,8 @@
 import React from 'react'
 import Header1 from './Header1';
+import {useHistory} from 'react-router-dom'
 const Signup = () => {
+    let history=useHistory();
     return (
         <div >
             <Header1 />
@@ -34,7 +36,7 @@ const Signup = () => {
                         <label class='m-2' for="remember">I certify that i am 18years of age or older,and i agree to<br/> the terms and conditions. </label>
                     </div>
                 <div class='ml-2'>
-                    <button class='bg-red-200 border-2 w-96 border-yellow-400'><div class='pl-8 p-2'>Create An Account</div></button>
+                    <button onClick={()=>{history.push("/portfolio")}} class='bg-red-200 border-2 w-96 border-yellow-400'><div class='pl-8 p-2'>Create An Account</div></button>
                 </div>
                 </div>
             </div>

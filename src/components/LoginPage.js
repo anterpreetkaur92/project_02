@@ -1,9 +1,11 @@
 import React from 'react';
 import '../App.css';
+import {useHistory} from 'react-router-dom'
 
 import Header1 from './Header1';
 
 const LoginPage = () => {
+    let history=useHistory();
     return (
         <div class='bg-gray-50 h-screen w-screen'>
             <Header1 />
@@ -26,10 +28,10 @@ const LoginPage = () => {
                     </div>
                     <div class='flex ml-2'>
                         <div>
-                            <button class='font-bold border-2 border-white bg-white w-48 p-2 px-6  hover:border-red-600 hover:bg-red-100'>Login</button>
+                            <button onClick={()=>{history.push("/login")}} class='font-bold border-2 border-white bg-white w-48 p-2 px-6  hover:border-red-600 hover:bg-red-100'>Login</button>
                         </div>
                         <div>
-                            <button class='font-bold border-2 border-white bg-white p-2 px-6 w-48 hover:border-red-600 hover:bg-red-100'>Reset Password</button>
+                            <button onClick={()=>{history.push("/resetpassword")}} class='font-bold border-2 border-white bg-white p-2 px-6 w-48 hover:border-red-600 hover:bg-red-100'>Reset Password</button>
                         </div>
                     </div>
                 </div>
