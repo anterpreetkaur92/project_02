@@ -1,6 +1,7 @@
 import React from 'react'
 import Header1 from './Header1';
 import {useHistory} from 'react-router-dom'
+import {Formik} from 'formik'
 const Signup = () => {
     let history=useHistory();
     return (
