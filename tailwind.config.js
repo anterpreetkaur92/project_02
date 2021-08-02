@@ -7,7 +7,8 @@ module.exports = {
     }
   },
   variants: {
-    borderColor: ['responsive', 'focus'],
+
+    borderColor:['hover','focus','responsive'],
     cursor: ['hover', 'focus']
 
   },

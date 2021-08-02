@@ -30,7 +30,7 @@ const LoginPage = () => {
                     </div>
                     <div className='flex ml-2'>
                         <div>
-                            <button onClick={()=>{history.push("/login")}} className='font-bold border-2 border-white bg-white w-48 p-2 px-6  hover:border-red-600 hover:bg-red-100'>Login</button>
+                            <button onClick={()=>{history.push("/login")}} className='font-bold border-2 border-white bg-white w-48 p-2 px-6 hover:border-red-600 hover:bg-red-100'>Login</button>
                         </div>
                         <div>
                             <button onClick={()=>{history.push("/resetpassword")}} className='font-bold border-2 border-white bg-white p-2 px-6 w-48 hover:border-red-600 hover:bg-red-100'>Reset Password</button>
