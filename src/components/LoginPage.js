@@ -1,68 +1,57 @@
-import React from 'react';
+import { React, useState } from 'react';
 import '../App.css';
 import { useHistory } from 'react-router-dom';
-import { AiFillEye } from 'react-icons/ai';
-import { Formik, Form, Field, ErrorMessage } from 'formik';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEye, faEyeSlash } from '@fortawesome/fontawesome-free-solid'
 import Header1 from './Header1';
-
 const LoginPage = () => {
     let history = useHistory();
+    let [icon, setIcon] = useState(faEyeSlash);
+    let [type, setType] = useState('password');
+    const changeIcon = () => {
+        if (icon == faEyeSlash && type == 'password') {
+            setIcon(faEye);
+            setType('text');
+        } else {
+            setIcon(faEyeSlash)
+            setType('password')
+        }
+
+    }
     return (
-        <div className='bg-gray-50 h-screen w-screen'>
+        <div class="w-1366 h-657">
             <Header1 />
-            <div className=' pt-40 m-4 font-sans flex flex-col justify-center items-center italic text-3xl tracking-wider font-semibold font-6xl'  >Welcome Back</div>
-            <div className='pt-46 w-screen flex flex-col justify-center items-center'>
-                <div className='w-auto border-2 bg-white p-4'>
-                    <div className='flex'>
-
-                        <Formik initialValues={{ email: '', password: '', checked: '' }}
-                            validate={values => {
-                                const errors = {};
-                                if (!values.email) {
-                                    errors.email = 'Required';
-                                } else if (
-                                    !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-                                ) {
-                                    errors.email = 'Invalid email address';
-                                } else if (!values.checked) {
-                                    errors.checked = "Remember me Required"
-                                }
-                                return errors;
-                            }}
-                            onSubmit={(values, { setSubmitting }) => {
-                                setTimeout(() => {
-                                    alert(JSON.stringify(values, null, 2));
-                                    setSubmitting(false);
-                                }, 400);
-                            }}>{({ isSubmitting }) => (
-                                <Form>
-                                    <div className="flex">
-                                        
-                                        <div className="m-1 bg-white">
-                                        <label htmlFor="email">Email Address*</label><br />
-                                            <Field className='pr-2 border-2 bg-gray-100 w-48 bg-opacity-80 ' type="email" name="email" />
-                                            <ErrorMessage name="email" component="div" /></div>
-                                        <div className='m-1 bg-white'>
-                                            <label htmlFor="password">Password*</label><br />
-                                            <Field className='pr-2 border-2 bg-gray-100 w-48 bg-opacity-80' type="password" name="password" />
-                                            <ErrorMessage name="password" component="div" />
-                                        </div>
+            <div className='w-1366 h-593 pl-102 bg-gray-100 bg-opacity-10'>
+                <div className="w-1161 h-593 ">
+                    <div className="w-1161 h-266 mt-130">
+                        <div className='w-224 h-45 ml-469 font-semibold text-3xl '>Welcome Back</div>
+                        <div className='flex ml-366 w-430  h-205 bg-white border rounded mt-15'>
+                            <div className=" w-400 h-57 mx-21 mt-17">
+                                <div className="bg-white flex">
+                                    <div>
+                                        <label htmlFor="email" className="text-xs text-gray-400 font-semibold">EmailAddress *</label><br />
+                                        <input className='shadow-inner rounded-sm bg-gray-100  bg-opacity-60 w-188 h-37' type="email" name="email" />
                                     </div>
-                                    <label><Field type="checkbox" name="checked" value="Remember me" />
-                                        <ErrorMessage name='checked' component="div" />Remember me </label>
-                                    <div className='flex ml-2'>
-                                        <div>
-                                            <button onClick={() => { history.push("/login") }} className='font-bold border-2 border-white bg-white w-48 p-2 px-6 hover:border-red-600 hover:bg-red-100'>Login</button>
-                                        </div>
-                                        <div>
-                                            <button onClick={() => { history.push("/resetpassword") }} className='font-bold border-2 border-white bg-white p-2 px-6 w-48 hover:border-red-600 hover:bg-red-100'>Reset Password</button>
-                                        </div>
+                                    <div className='bg-white '>
+                                        <label htmlFor="password" className="text-xs text-gray-400 font-semibold ml-11">Password *</label><br />
+                                        <button className='icon' onClick={changeIcon}><FontAwesomeIcon icon={icon} /></button>
+                                        <input className='shadow-inner rounded-sm bg-gray-100 bg-opacity-60 w-188 h-37 ml-11' type={type} name="password" />
                                     </div>
-
-                                </Form>
-                            )}</Formik>
-
+                                </div>
+                                <div className='w-400 h-41 pt-21'>
+                                    <label className='text-gray-400 text-sm font-semibold '><input type="checkbox" name="checked" value="Remember me" />
+                                        &nbsp;&nbsp; Remember me </label>
+                                </div>
+                                <div className='flex w-388 h-65 pt-5'>
+                                    <div>
+                                        <button onClick={() => { history.push("/login") }} className='font-bold text-sm border text-futurecolor w-194 h-45 border-futurecolor rounded bg-pink-100  bg-opacity-60'>Login</button>
+                                    </div>
+                                    <div>
+                                        <button onClick={() => { history.push("/resetpassword") }} className='font-bold text-xs border border-white w-194 h-45 bg-white rounded  hover:bg-gray-200'>Reset Password</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

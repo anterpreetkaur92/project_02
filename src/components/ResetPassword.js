@@ -1,22 +1,28 @@
 import React from 'react'
 import Header1 from './Header1';
-import {useHistory} from 'react-router-dom'
-
+//import LoginPage from './LoginPage';
+import logo from '../images/futureview.png';
+import { useHistory } from 'react-router-dom';
 const ResetPassword = () => {
-    let history=useHistory();
-    return (
-        <div>
-            <Header1 />
-            <div className='flex flex-col justify-center items-center'>
-                <div className=' pt-40 m-4 font-sans flex flex-col justify-center items-center italic text-3xl tracking-wide font-semibold font-6xl'  >Reset Password</div>
-                <div className='w-auto border-2 bg-white p-4'>
-                    <div>Email Address*</div>
-                    <div className='border-2 w-80'><input type='text' /></div>
-                    <div className='flex'>
-                        <button  className='font-bold border-2 border-white bg-white w-44 p-2 px-6  hover:border-red-600 hover:bg-red-100'>Reset Password</button>
-                        <button onClick={()=>{history.push("/login")}} className='font-bold border-2 border-white bg-white w-36 p-2 px-8  hover:border-red-600 hover:bg-red-100'>GoToLogin</button>
-                    </div>
 
+    let history = useHistory();
+    return (
+        <div class="w-1366 h-657">
+            <Header1 />
+            <div className=' w-1366 h-593 pl-102 bg-gray-100 bg-opacity-10'>
+                <div className="w-1161 h-593 pt-30 ">
+                    <div className="w-1161 h-225 mt-100 ">
+                        <div className='text-3xl font-bold ml-561'>Reset Password</div>
+                        <div className='w-320 h-164 border bg-white ml-523 mt-25 rounded'>
+                            <div className='w-290 h-57 mt-19 ml-21'>
+                                <label className='text-xs font-medium text-gray-500'>Email Address *</label><br />
+                                <input type='text' className='bg-gray-100 bg-opacity-60 rounded-sm shadow-inner w-278 h-37' /></div>
+                            <div className='flex w-278 h-65 ml-21'>
+                                <button className='font-semibold mt-21 border border-white  border-futurecolor text-sm  text-futurecolor bg-pink-100 bg-opacity-40 rounded-sm w-139 h-45'>Reset Password</button>
+                                <button onClick={() => { history.push("/login") }} className='mt-21 font-bold border border-white w-139 h-45 bg-white  hover:bg-gray-200 '>Go To Login</button>
+                            </div>
+                            </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -25,3 +31,4 @@ const ResetPassword = () => {
 }
 
 export default ResetPassword
+

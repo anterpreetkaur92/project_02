@@ -4,12 +4,21 @@ module.exports = {
   theme: {
     letterSpacing:{
       widest: '.10em'
+    },
+    extend:{
+      colors:{
+        futurecolor:'#E1B668'
+      }
     }
   },
   variants: {
-
+    extend: {
+      borderWidth:['hover','focus'],
+      maxHeight: ['focus'],
+    },
     borderColor:['hover','focus','responsive'],
     cursor: ['hover', 'focus']
+    
 
   },
   plugins: [],
