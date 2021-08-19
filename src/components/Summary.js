@@ -1,15 +1,16 @@
 import React from 'react'
 import Header2 from './Header2';
-import { AiOutlineArrowUp, AiOutlineArrowDown } from "react-icons/ai";
+import { AiOutlineArrowDown } from "react-icons/ai";
+import { FaChartLine } from "react-icons/fa";
 import {IconContext} from 'react-icons';
-import { useHistory } from 'react-router-dom';
+import {useHistory} from 'react-router-dom';
 const Summary = () => {
 
     let history = useHistory();
     return (
         <div class="w-1366 h-657">
             <Header2 />
-            <div className=' w-1366 h-593 pl-102 bg-gray-100 bg-opacity-10'>
+            <div className='w-1366 h-593 pl-102 bg-gray-100 bg-opacity-10'>
                 <div className="w-1161 h-593 pt-30 overflow-y-auto ">
                     <div className="flex ">
                         <div className=''>
@@ -34,111 +35,104 @@ const Summary = () => {
                                             </tr>
 
                                             <tr className="bg-white border-collapse border border-gray-300 h-10">
-                                                <td className="text-blue-600 text-bold h-41 pl-14">See More</td>
+                                                <td className="text-blue-600 text-bold h-41 pl-14"><a href="#">See More</a></td>
                                             </tr>
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
 
-                            <div className='h-92'>
+                            <div className='h-92 mt-4'>
                                 <label className="font-bold text-gray-400 ">Top Traded Today</label>
-                                <div className="border border-gray-300 bg-white mt-4 w-96 pl-6 h-10 pt-2">
+                                <div className="border border-gray-300 bg-white mt-2 w-96 pl-6 h-10 pt-2">
                                     ARDOVA
                                 </div>
                             </div>
 
                             <div className='flex'>
-                                <div className="mr-6 mt-4">
+                                <div className="mr-6 mt-1">
                                     <label className="font-bold text-gray-400 "> Top Gainers Today</label>
                                     <table className="table-fixed border-collapse border border-gray-300 mt-2">
                                         <thead >
                                         </thead>
                                         <tbody className="bg-white">
-                                        <IconContext.Provider value={{ color: 'red', size: '50px' }}>
+                                        <IconContext.Provider value={{ color: 'green', size: '',  }}>
 
                                             <tr className="bg-white border-collapse border border-gray-300 h-10">
                                                 <td className="w-188 h-40 pl-14 ">ARD</td>
-                                                <td className="w-188 h-40 pl-14 "><div class="flex">110<AiOutlineArrowUp style={{color:"red"}}/> </div></td>
+                                                <td className="w-188 h-40 pl-14 "><div class="flex">110<FaChartLine /> </div></td>
                                             </tr>
                                             <tr className="bg-white border-collapse border border-gray-300 h-10">
                                                 <td className="w-188 h-40 pl-14 ">ARD</td>
-                                                <td className="w-188 h-40 pl-14 "><div class="flex">110<AiOutlineArrowUp /></div></td>
+                                                <td className="w-188 h-40 pl-14 "><div class="flex">110<FaChartLine /></div></td>
                                             </tr>
                                             <tr className="bg-white border-collapse border border-gray-300 h-10">
                                                 <td className="w-188 h-40 pl-14 ">ARD</td>
-                                                <td className="w-188 h-40 pl-14 "><div class="flex">110<AiOutlineArrowUp /></div></td>
+                                                <td className="w-188 h-40 pl-14 "><div class="flex">110<FaChartLine /></div></td>
                                             </tr>
                                             <tr className="bg-white border-collapse border border-gray-300 h-10">
                                                 <td className="w-188 h-40 pl-14 ">ARD</td>
-                                                <td className="w-188 h-40 pl-14 "><div class="flex">110<AiOutlineArrowUp /></div></td>
+                                                <td className="w-188 h-40 pl-14 "><div class="flex">110<FaChartLine /></div></td>
                                             </tr>
                                             <tr className="bg-white border-collapse border border-gray-300 h-10">
                                                 <td className="w-188 h-40 pl-14 ">ARD</td>
-                                                <td className="w-188 h-40 pl-14 "><div class="flex">110<AiOutlineArrowUp /></div></td>
+                                                <td className="w-188 h-40 pl-14 "><div class="flex">110<FaChartLine /></div></td>
                                             </tr>
                                             <tr className="bg-white border-collapse border border-gray-300 h-10">
                                                 <td className="w-188 h-40 pl-14 ">ARD</td>
-                                                <td className="w-188 h-40 pl-14 "><div class="flex">110<AiOutlineArrowUp /></div></td>
+                                                <td className="w-188 h-40 pl-14 "><div class="flex">110<FaChartLine /></div></td>
                                             </tr>
                                             <tr className="bg-white border-collapse border border-gray-300 h-10">
                                                 <td className="w-188 h-40 pl-14 ">ARD</td>
-                                                <td className="w-188 h-40 pl-14 "><div class="flex">110<AiOutlineArrowUp /></div></td>
+                                                <td className="w-188 h-40 pl-14 "><div class="flex">110<FaChartLine /></div></td>
                                             </tr>
                                             <tr className="bg-white border-collapse border border-gray-300 h-10">
                                                 <td className="w-188 h-40 pl-14 ">ARD</td>
-                                                <td className="w-188 h-40 pl-14 "><div class="flex">110<AiOutlineArrowUp /></div></td>
+                                                <td className="w-188 h-40 pl-14 "><div class="flex">110<FaChartLine /></div></td>
                                             </tr>
                                             </IconContext.Provider>
                                         </tbody>
                                     </table>
                                 </div>
-                                <div className="m-4">
+                                <div className="m-4 mt-1">
                                     <label className="font-bold text-gray-400 "> Top Lossers Today</label>
                                     <table className="table-fixed border-collapse border border-gray-300 mt-2">
                                         <thead>
                                         </thead>
                                         <tbody className="bg-white">
+                                        <IconContext.Provider value={{ color: 'red', size: '22px' }}>
                                             <tr className="bg-white border-collapse border border-gray-300 h-10">
                                                 <td className="w-188 h-40 pl-14 ">sample</td>
                                                 <td className="w-188 h-40 pl-14 "><div class="flex">541<AiOutlineArrowDown /></div></td>
-
                                             </tr>
                                             <tr className="bg-white border-collapse border border-gray-300 h-10">
                                                 <td className="w-188 h-40 pl-14 ">sample</td>
                                                 <td className="w-188 h-40 pl-14 "><div class="flex">541<AiOutlineArrowDown /></div></td>
-
                                             </tr>
                                             <tr className="bg-white border-collapse border border-gray-300 h-10">
                                                 <td className="w-188 h-40 pl-14 ">sample</td>
                                                 <td className="w-188 h-40 pl-14 "><div class="flex">541<AiOutlineArrowDown /></div></td>
-
                                             </tr>
                                             <tr className="bg-white border-collapse border border-gray-300 h-10">
                                                 <td className="w-188 h-40 pl-14 ">sample</td>
                                                 <td className="w-188 h-40 pl-14 "><div class="flex">541<AiOutlineArrowDown /></div></td>
-
+                                            </tr>                                            <tr className="bg-white border-collapse border border-gray-300 h-10">
+                                                <td className="w-188 h-40 pl-14 ">sample</td>
+                                                <td className="w-188 h-40 pl-14 "><div class="flex">541<AiOutlineArrowDown /></div></td>
                                             </tr>
                                             <tr className="bg-white border-collapse border border-gray-300 h-10">
                                                 <td className="w-188 h-40 pl-14 ">sample</td>
                                                 <td className="w-188 h-40 pl-14 "><div class="flex">541<AiOutlineArrowDown /></div></td>
-
                                             </tr>
                                             <tr className="bg-white border-collapse border border-gray-300 h-10">
                                                 <td className="w-188 h-40 pl-14 ">sample</td>
                                                 <td className="w-188 h-40 pl-14 "><div class="flex">541<AiOutlineArrowDown /></div></td>
-
                                             </tr>
                                             <tr className="bg-white border-collapse border border-gray-300 h-10">
                                                 <td className="w-188 h-40 pl-14 ">sample</td>
                                                 <td className="w-188 h-40 pl-14 "><div class="flex">541<AiOutlineArrowDown /></div></td>
-
                                             </tr>
-                                            <tr className="bg-white border-collapse border border-gray-300 h-10">
-                                                <td className="w-188 h-40 pl-14 ">sample</td>
-                                                <td className="w-188 h-40 pl-14 "><div class="flex">541<AiOutlineArrowDown /></div></td>
-
-                                            </tr>
+                                            </IconContext.Provider>
                                         </tbody>
                                     </table>
                                 </div>

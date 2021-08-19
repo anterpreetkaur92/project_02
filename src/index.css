@@ -330,21 +330,29 @@
     .mt-34{
         margin-top:34px;
     }
+   
     .icon{
         position:absolute;
         right:480px;
         top:295px;
         font-size:25px; 
     }
+   
     .icon2{
         position:absolute;
         right:480px;
         top:313px;
         font-size:25px;
     }
+   
     .space::placeholder{
         padding-left:15px;
     }
-
-
+   
+    .dropdown{
+       z-index:1000;
+       }
+    .control-group:focus-within .control-label {
+        color: #E1B668 ;
+     }	
 }

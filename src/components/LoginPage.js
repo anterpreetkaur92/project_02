@@ -28,12 +28,12 @@ const LoginPage = () => {
                         <div className='flex ml-366 w-430  h-205 bg-white border rounded mt-15'>
                             <div className=" w-400 h-57 mx-21 mt-17">
                                 <div className="bg-white flex">
-                                    <div>
-                                        <label htmlFor="email" className="text-xs text-gray-400 font-semibold">EmailAddress *</label><br />
+                                    <div className='control-group'>
+                                        <label className="control-label text-xs text-gray-400 font-semibold">EmailAddress *</label><br />
                                         <input className='shadow-inner rounded-sm bg-gray-100  bg-opacity-60 w-188 h-37' type="email" name="email" />
                                     </div>
-                                    <div className='bg-white '>
-                                        <label htmlFor="password" className="text-xs text-gray-400 font-semibold ml-11">Password *</label><br />
+                                    <div className='bg-white control-group '>
+                                        <label htmlFor="password" className=" control-label text-xs text-gray-400 font-semibold ml-11">Password *</label><br />
                                         <button className='icon' onClick={changeIcon}><FontAwesomeIcon icon={icon} /></button>
                                         <input className='shadow-inner rounded-sm bg-gray-100 bg-opacity-60 w-188 h-37 ml-11' type={type} name="password" />
                                     </div>

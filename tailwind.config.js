@@ -16,10 +16,11 @@ module.exports = {
       borderWidth:['hover','focus'],
       maxHeight: ['focus'],
     },
-    borderColor:['hover','focus','responsive'],
-    cursor: ['hover', 'focus']
+    borderColor:['hover','focus','responsive','focus-within'],
+    cursor: ['hover', 'focus'],
     
-
   },
   plugins: [],
+  
 }
+
