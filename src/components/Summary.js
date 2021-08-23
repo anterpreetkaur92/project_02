@@ -47,7 +47,7 @@ const Summary = () => {
 
                             <div className='h-92 mt-4'>
                                 <label className="font-bold text-gray-400 ">Top Traded Today</label>
-                                <div className="border border-gray-300 bg-white mt-2 w-96 pl-6 h-10 pt-2">
+                                <div className="border border-gray-300 text-gray-500 bg-white mt-2 w-96 pl-6 h-10 pt-2">
                                     ARDOVA
                                 </div>
                             </div>
