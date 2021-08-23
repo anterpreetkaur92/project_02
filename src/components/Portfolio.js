@@ -34,12 +34,12 @@ const Portfolio = () => {
                                 </div>
                             </div>
                             <div className='flex w-422 h-57 ml-19'>
-                                <div>
-                                    <label className="text-gray-400 text-xs font-semibold ">Username/Email*</label><br />
+                                <div className="control-group">
+                                    <label className="control-label text-gray-400 text-xs font-semibold ">Username/Email*</label><br />
                                     <input className='bg-gray-100 w-199 h-37 rounded-sm shadow-inner' type='text' />
                                 </div>
-                                <div>
-                                    <label className="text-gray-400 text-xs font-semibold ml-3">Password*</label><br />
+                                <div className="control-group">
+                                    <label className="control-label text-gray-400 text-xs font-semibold ml-3">Password*</label><br />
                                     <button className='icon2' onClick={changeIcon}><FontAwesomeIcon icon={icon} /></button>
                                     <input className=' bg-gray-100 w-199 h-37 ml-3 rounded-sm shadow-inner' type={type} />
                                 </div>

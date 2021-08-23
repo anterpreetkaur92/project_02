@@ -3,7 +3,10 @@ import Header2 from './Header2';
 import { AiOutlineArrowDown } from "react-icons/ai";
 import { FaChartLine } from "react-icons/fa";
 import {IconContext} from 'react-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleDoubleRight } from '@fortawesome/fontawesome-free-solid';
 import {useHistory} from 'react-router-dom';
+
 const Summary = () => {
 
     let history = useHistory();
@@ -18,24 +21,24 @@ const Summary = () => {
                                 <div className='w-818 h-30'>
                                     <label className="font-bold text-gray-400">Your Stocks test</label><br />
                                     <table className="table-fixed border-collapse border border-gray-300 mt-3">
-                                        <thead>
-                                            <tr classNames="bg-gray-300 border-collapse border border-gray-300 h-10 text-gray-500">
-                                                <th className="w-201 h-41 ">Stock</th>
-                                                <th className="w-201 h-41">Shares</th>
-                                                <th className="w-201 h-41">Price</th>
-                                                <th className="w-201 h-41">Value</th>
-                                            </tr>
+                                        <thead classNames=" border-collapse border border-gray-300 h-10 ">
+                                            
+                                                <th className="w-201 h-41 bg-gray-100 text-gray-500 text-xs">Stock</th>
+                                                <th className="w-201 h-41 bg-gray-100 text-gray-500 text-xs">Shares</th>
+                                                <th className="w-201 h-41 bg-gray-100 text-gray-500 text-xs">Price</th>
+                                                <th className="w-201 h-41 bg-gray-100 text-gray-500 text-xs">Value</th>
+                                            
                                         </thead>
                                         <tbody className="bg-white">
                                             <tr className="bg-white border-collapse border border-gray-300 h-10">
-                                                <td className="w-201 h-41 pl-14 ">ARDOVA</td>
-                                                <td className="w-201 h-41 pl-14 ">104</td>
-                                                <td className="w-201 h-41 pl-14 ">15.50</td>
-                                                <td className="w-201 h-41 pl-14 ">1,612.00</td>
+                                                <td className="w-201 h-41 pl-16 text-gray-500 ">ARDOVA</td>
+                                                <td className="w-201 h-41 pl-16 text-gray-500 ">104</td>
+                                                <td className="w-201 h-41 pl-16 text-gray-500 ">15.50</td>
+                                                <td className="w-201 h-41 pl-16 text-gray-500 ">1,612.00</td>
                                             </tr>
 
                                             <tr className="bg-white border-collapse border border-gray-300 h-10">
-                                                <td className="text-blue-600 text-bold h-41 pl-14"><a href="#">See More</a></td>
+                                                <td className="text-indigo-900  h-41 pl-14"><a className='font-bold' href="#">See More  <FontAwesomeIcon style={{color:'purple'}} icon={faAngleDoubleRight} /></a></td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -59,36 +62,36 @@ const Summary = () => {
                                         <IconContext.Provider value={{ color: 'green', size: '',  }}>
 
                                             <tr className="bg-white border-collapse border border-gray-300 h-10">
-                                                <td className="w-188 h-40 pl-14 ">ARD</td>
-                                                <td className="w-188 h-40 pl-14 "><div class="flex">110<FaChartLine /> </div></td>
+                                                <td className="w-188 h-40 pl-14 text-gray-500">ARD</td>
+                                                <td className="w-188 h-40 pl-14 text-gray-500"><div class="flex">110<FaChartLine /> </div></td>
                                             </tr>
                                             <tr className="bg-white border-collapse border border-gray-300 h-10">
-                                                <td className="w-188 h-40 pl-14 ">ARD</td>
-                                                <td className="w-188 h-40 pl-14 "><div class="flex">110<FaChartLine /></div></td>
+                                                <td className="w-188 h-40 pl-14 text-gray-500">ARD</td>
+                                                <td className="w-188 h-40 pl-14 text-gray-500"><div class="flex">110<FaChartLine /></div></td>
                                             </tr>
                                             <tr className="bg-white border-collapse border border-gray-300 h-10">
-                                                <td className="w-188 h-40 pl-14 ">ARD</td>
-                                                <td className="w-188 h-40 pl-14 "><div class="flex">110<FaChartLine /></div></td>
+                                                <td className="w-188 h-40 pl-14 text-gray-500">ARD</td>
+                                                <td className="w-188 h-40 pl-14 text-gray-500"><div class="flex">110<FaChartLine /></div></td>
                                             </tr>
                                             <tr className="bg-white border-collapse border border-gray-300 h-10">
-                                                <td className="w-188 h-40 pl-14 ">ARD</td>
-                                                <td className="w-188 h-40 pl-14 "><div class="flex">110<FaChartLine /></div></td>
+                                                <td className="w-188 h-40 pl-14 text-gray-500">ARD</td>
+                                                <td className="w-188 h-40 pl-14 text-gray-500"><div class="flex">110<FaChartLine /></div></td>
                                             </tr>
                                             <tr className="bg-white border-collapse border border-gray-300 h-10">
-                                                <td className="w-188 h-40 pl-14 ">ARD</td>
-                                                <td className="w-188 h-40 pl-14 "><div class="flex">110<FaChartLine /></div></td>
+                                                <td className="w-188 h-40 pl-14 text-gray-500">ARD</td>
+                                                <td className="w-188 h-40 pl-14 text-gray-500"><div class="flex">110<FaChartLine /></div></td>
                                             </tr>
                                             <tr className="bg-white border-collapse border border-gray-300 h-10">
-                                                <td className="w-188 h-40 pl-14 ">ARD</td>
-                                                <td className="w-188 h-40 pl-14 "><div class="flex">110<FaChartLine /></div></td>
+                                                <td className="w-188 h-40 pl-14 text-gray-500">ARD</td>
+                                                <td className="w-188 h-40 pl-14 text-gray-500"><div class="flex">110<FaChartLine /></div></td>
                                             </tr>
                                             <tr className="bg-white border-collapse border border-gray-300 h-10">
-                                                <td className="w-188 h-40 pl-14 ">ARD</td>
-                                                <td className="w-188 h-40 pl-14 "><div class="flex">110<FaChartLine /></div></td>
+                                                <td className="w-188 h-40 pl-14 text-gray-500">ARD</td>
+                                                <td className="w-188 h-40 pl-14 text-gray-500"><div class="flex">110<FaChartLine /></div></td>
                                             </tr>
                                             <tr className="bg-white border-collapse border border-gray-300 h-10">
-                                                <td className="w-188 h-40 pl-14 ">ARD</td>
-                                                <td className="w-188 h-40 pl-14 "><div class="flex">110<FaChartLine /></div></td>
+                                                <td className="w-188 h-40 pl-14 text-gray-500">ARD</td>
+                                                <td className="w-188 h-40 pl-14 text-gray-500"><div class="flex">110<FaChartLine /></div></td>
                                             </tr>
                                             </IconContext.Provider>
                                         </tbody>
@@ -102,35 +105,35 @@ const Summary = () => {
                                         <tbody className="bg-white">
                                         <IconContext.Provider value={{ color: 'red', size: '22px' }}>
                                             <tr className="bg-white border-collapse border border-gray-300 h-10">
-                                                <td className="w-188 h-40 pl-14 ">sample</td>
-                                                <td className="w-188 h-40 pl-14 "><div class="flex">541<AiOutlineArrowDown /></div></td>
+                                                <td className="w-188 h-40 pl-14 text-gray-500">sample</td>
+                                                <td className="w-188 h-40 pl-14 text-gray-500"><div class="flex">541<AiOutlineArrowDown /></div></td>
                                             </tr>
                                             <tr className="bg-white border-collapse border border-gray-300 h-10">
-                                                <td className="w-188 h-40 pl-14 ">sample</td>
-                                                <td className="w-188 h-40 pl-14 "><div class="flex">541<AiOutlineArrowDown /></div></td>
+                                                <td className="w-188 h-40 pl-14 text-gray-500">sample</td>
+                                                <td className="w-188 h-40 pl-14 text-gray-500"><div class="flex">541<AiOutlineArrowDown /></div></td>
                                             </tr>
                                             <tr className="bg-white border-collapse border border-gray-300 h-10">
-                                                <td className="w-188 h-40 pl-14 ">sample</td>
-                                                <td className="w-188 h-40 pl-14 "><div class="flex">541<AiOutlineArrowDown /></div></td>
+                                                <td className="w-188 h-40 pl-14 text-gray-500 ">sample</td>
+                                                <td className="w-188 h-40 pl-14 text-gray-500"><div class="flex">541<AiOutlineArrowDown /></div></td>
                                             </tr>
                                             <tr className="bg-white border-collapse border border-gray-300 h-10">
-                                                <td className="w-188 h-40 pl-14 ">sample</td>
-                                                <td className="w-188 h-40 pl-14 "><div class="flex">541<AiOutlineArrowDown /></div></td>
+                                                <td className="w-188 h-40 pl-14 text-gray-500">sample</td>
+                                                <td className="w-188 h-40 pl-14 text-gray-500"><div class="flex">541<AiOutlineArrowDown /></div></td>
                                             </tr>                                            <tr className="bg-white border-collapse border border-gray-300 h-10">
-                                                <td className="w-188 h-40 pl-14 ">sample</td>
-                                                <td className="w-188 h-40 pl-14 "><div class="flex">541<AiOutlineArrowDown /></div></td>
+                                                <td className="w-188 h-40 pl-14 text-gray-500">sample</td>
+                                                <td className="w-188 h-40 pl-14 text-gray-500 "><div class="flex">541<AiOutlineArrowDown /></div></td>
                                             </tr>
                                             <tr className="bg-white border-collapse border border-gray-300 h-10">
-                                                <td className="w-188 h-40 pl-14 ">sample</td>
-                                                <td className="w-188 h-40 pl-14 "><div class="flex">541<AiOutlineArrowDown /></div></td>
+                                                <td className="w-188 h-40 pl-14 text-gray-500">sample</td>
+                                                <td className="w-188 h-40 pl-14 text-gray-500"><div class="flex">541<AiOutlineArrowDown /></div></td>
                                             </tr>
                                             <tr className="bg-white border-collapse border border-gray-300 h-10">
-                                                <td className="w-188 h-40 pl-14 ">sample</td>
-                                                <td className="w-188 h-40 pl-14 "><div class="flex">541<AiOutlineArrowDown /></div></td>
+                                                <td className="w-188 h-40 pl-14 text-gray-500">sample</td>
+                                                <td className="w-188 h-40 pl-14 text-gray-500"><div class="flex">541<AiOutlineArrowDown /></div></td>
                                             </tr>
                                             <tr className="bg-white border-collapse border border-gray-300 h-10">
-                                                <td className="w-188 h-40 pl-14 ">sample</td>
-                                                <td className="w-188 h-40 pl-14 "><div class="flex">541<AiOutlineArrowDown /></div></td>
+                                                <td className="w-188 h-40 pl-14 text-gray-500">sample</td>
+                                                <td className="w-188 h-40 pl-14 text-gray-500"><div class="flex">541<AiOutlineArrowDown /></div></td>
                                             </tr>
                                             </IconContext.Provider>
                                         </tbody>

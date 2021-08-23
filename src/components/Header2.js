@@ -2,32 +2,62 @@ import React from 'react'
 import logo from '../images/futureview.png'
 import person from '../images/person.jpg'
 import { useHistory } from 'react-router-dom'
+
 import Button from '@material-ui/core/Button';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import Fade from '@material-ui/core/Fade';
 import { styled } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCaretDown} from '@fortawesome/fontawesome-free-solid'
+import {createTheme} from '@material-ui/core/styles'
 
-
+const theme = createTheme({
+    palette: {
+      primary: {
+        light: '#757ce8',
+        main: '#3f50b5',
+        dark: '#002884',
+        contrastText: 'black',
+      },
+      secondary: {
+        light: '#ff7961',
+        main: '#f44336',
+        dark: '#ba000d',
+        contrastText: '#000',
+      },
+    },
+  });
 
 const MyButton = styled(Button)({
     color: 'gray', 
-    padding: '10px 0px',
+    padding: '10px',
     '&:hover': {
         background: "white",
      },
+     fontSize:'1rem',
+     fontWeight:'',
+     textTransform:'none'
     
      
   });
+  
   const Item = styled(MenuItem)({
     color: 'gray', 
-    padding: '0 30px',
-    height:'50px',
-    top:'0'
+    '&:hover': {
+        background: "rgb(229, 228, 226)",
+        backgroundOpacity:'60%'
+     },
+    fontSize:'1rem',
+    fontWeight:'',
+    lineHeight:'40px',
 
+
+     
+    
+     
   });
+
 
   
 const Header2 = () => {
@@ -67,9 +97,10 @@ const Header2 = () => {
 
                 <button className="bg-red-100 border border-yellow-600 w-200 h-40  font-semibold text-yellow-700 tracking-widest ml-5 mt-3">MAKE A TRADE</button>
 
-                <div class="mt-3 ml-10 h-35 dropdown ">
-                    <MyButton aria-controls="fade-menu" aria-haspopup="true" onClick={handleClick} >
-                        Menu
+                <div class="mt-3 ml-5 h-35 dropdown ">
+                
+                    <MyButton  aria-controls="fade-menu" aria-haspopup="true" onClick={handleClick} >
+                       Menu <FontAwesomeIcon className="ml-5" icon={faCaretDown} />
                     </MyButton>
                     <Menu
                         id="fade-menu"
@@ -80,14 +111,12 @@ const Header2 = () => {
                         TransitionComponent={Fade}
                         
                     >
-                    <Typography component="div">
-                    <Box fontWeight="fontWeightMedium"><Item  onClick={handleClose}>Account</Item></Box>
-                    <Box fontWeight="fontWeightRegular"><Item  onClick={handleClose}>Transactions</Item></Box>
-                    <Box fontWeight="fontWeightRegular" ><Item  onClick={handleClose}>Settings</Item></Box>
-                    <Box fontWeight="fontWeightRegular"><Item   onClick={handleClose}>Logout</Item></Box>
-                    </Typography>
+                    <Item  onClick={handleClose}>Account</Item>
+                    <Item  onClick={handleClose}>Transactions</Item>
+                    <Item  onClick={handleClose}>Settings</Item>
+                    <Item   onClick={handleClose}>Logout</Item>
                     </Menu>
-                </div>
+                                  </div>
                 <div class="ml-2 my-2 rounded-full overflow-hidden h-11 w-11 mt-3.5">
                     <img src={person}></img>
                 </div>
